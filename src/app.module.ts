@@ -7,17 +7,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { DatabaseModule } from './database/database.module';
 
 @Module({
-  imports: [TutorialModule, UsersModule,
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'user',
-      password: 'password',
-      database: 'tutorialusers',
-      entities: [],
-      synchronize: true,
-    }),
+  imports: [
+    TutorialModule, 
+    UsersModule,
     DatabaseModule
   ],
   controllers: [AppController],
