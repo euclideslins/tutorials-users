@@ -1,6 +1,12 @@
-import { Repository } from "typeorm";
-import { Usuario } from "../entities/tutorial.entity";
+import { EntityRepository, Repository } from "typeorm";
+import { Tutorial } from "../entities/tutorial.entity";
+import { Usuario } from "../entities/usuario.entity";
 
-export class UserRepository extends Repository<Usuario> {
 
+export interface UserRepository extends Repository<Usuario> {
+    this: Repository<Usuario>;
+}
+
+
+export const customUsuariolRepositoryMethods = {
 }
