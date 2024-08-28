@@ -38,3 +38,36 @@ DATABASE_PORT=3306
 DATABASE_USERNAME=user
 DATABASE_PASSWORD=password
 DATABASE_NAME=tutorialusers
+
+
+# Documentação da API
+
+## Acesso à Documentação
+
+A documentação da API está disponível no Swagger. Após iniciar o servidor, acesse:
+
+[http://localhost:3000/api](http://localhost:3000/api)
+
+## Autenticação no Swagger
+
+Para usar a autenticação via Bearer Token no Swagger:
+
+1. Clique em "Authorize" no canto superior direito da interface do Swagger.
+2. Insira o token de autenticação no formato `Bearer <seu-token>` e clique em "Authorize".
+3. Feche a janela de autorização.
+
+## Design Patterns e Arquitetura
+
+### Design Patterns
+
+- **Repository Pattern**: Usado para encapsular a lógica de acesso a dados e fornecer uma interface mais limpa.
+- **Service Pattern**: Separa a lógica de negócios em serviços para melhor modularidade e teste.
+
+### Arquitetura
+
+- **Modularidade**: O projeto é dividido em módulos (auth, users, tutorial), cada um responsável por uma parte específica da aplicação.
+- **Injeção de Dependências**: Utiliza a injeção de dependências para gerenciar serviços e repositórios.
+
+## Escalabilidade
+
+O projeto é escalável devido à sua arquitetura modular e ao uso de padrões de design que permitem adicionar novos recursos e serviços com facilidade. A utilização do TypeORM e a configuração via variáveis de ambiente facilitam a adaptação a diferentes ambientes e requisitos de banco de dados.
