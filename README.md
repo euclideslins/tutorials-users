@@ -38,7 +38,7 @@ DATABASE_PORT=3306
 DATABASE_USERNAME=user
 DATABASE_PASSWORD=password
 DATABASE_NAME=tutorialusers
-
+```
 
 # Documentação da API
 
