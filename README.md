@@ -14,6 +14,12 @@ Este projeto é uma aplicação NestJS que gerencia tutoriais e usuários, com a
 
 ## Estrutura do Projeto
 
+- [Escalabilidade](#escalabilidade)
+- [Instalação](#instalação)
+- [Licença](#licença)
+
+## Estrutura do Projeto
+
 O projeto é estruturado da seguinte forma:
 
 - **src/**
@@ -25,7 +31,9 @@ O projeto é estruturado da seguinte forma:
   - **main.ts**: Ponto de entrada da aplicação.
   - **app.module.ts**: Módulo principal da aplicação.
 
-## Configuração do Ambiente
+![Arquitetura](assets/image.png)
+
+
 
 ### Variáveis de Ambiente
 
@@ -41,7 +49,6 @@ DATABASE_NAME=tutorialusers
 ```
 
 # Documentação da API
-
 ## Acesso à Documentação
 
 A documentação da API está disponível no Swagger. Após iniciar o servidor, acesse:
