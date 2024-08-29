@@ -78,3 +78,40 @@ Para usar a autenticação via Bearer Token no Swagger:
 ## Escalabilidade
 
 O projeto é escalável devido à sua arquitetura modular e ao uso de padrões de design que permitem adicionar novos recursos e serviços com facilidade. A utilização do TypeORM e a configuração via variáveis de ambiente facilitam a adaptação a diferentes ambientes e requisitos de banco de dados.
+
+
+
+```
+  CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE tutorial (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    conteudo TEXT NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO usuarios (nome, email, senha)
+VALUES 
+('Alice Silva', 'alice.silva@example.com', 'senha123'),
+('Bruno Costa', 'bruno.costa@example.com', 'senha456'),
+('Carla Lima', 'carla.lima@example.com', 'senha789');
+
+
+
+INSERT INTO tutorial (titulo, conteudo)
+VALUES 
+('Como usar SQL', 'Este tutorial explica os conceitos básicos de SQL, incluindo criação de tabelas, inserção de dados, e consultas.'),
+('Guia de HTML', 'Aprenda os fundamentos do HTML para criar páginas web. Inclui exemplos de uso de tags e estruturação de documentos.'),
+('Introdução ao CSS', 'Neste tutorial, você aprenderá a estilizar páginas web usando CSS. Cobrimos seletores, propriedades, e layout.');
+```
